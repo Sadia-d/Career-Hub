@@ -1,6 +1,7 @@
 [
      {
       "id": 1,
+       "img":"https://i.ibb.co/YT7VDPQR/google.webp",
       "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
       "job_title": "Technical Database Engineer",
       "company_name": "Google LLC",
@@ -20,6 +21,7 @@
     },
     {
         "id": 2,
+         "img":"https://i.ibb.co/wjwfnYr/netflix.png",
         "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
         "job_title": "Senior Product Designer",
         "company_name": "Netflix",
@@ -39,6 +41,7 @@
       },
       {
         "id": 3,
+         "img":"https://i.ibb.co/DgktpzNM/gfh.jpg",
         "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
         "job_title": "Software Engineer",
         "company_name": "Tesla",
@@ -58,6 +61,7 @@
       },
       {
         "id": 4,
+        "img":"https://i.ibb.co/M4qxJqL/airbnb.png",
         "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
         "job_title": "Software Engineer",
         "company_name": "Google LLC",
@@ -77,6 +81,7 @@
       },
       {
         "id": 5,
+         "img":"https://i.ibb.co/M4qxJqL/airbnb.png",
         "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
         "job_title": "Technical Database Engineer",
         "company_name": "Tesla",
@@ -96,6 +101,7 @@
       },
       {
         "id": 6,
+         "img":"https://i.ibb.co/M4qxJqL/airbnb.png",
         "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
         "job_title": "Senior Product Designer",
         "company_name": "Netflix",

@@ -1,9 +1,14 @@
+import Banner from "../../Banner/Banner";
+import JobCategory from "../../JobCategory/JobCategory";
+import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
 
 
 const Statistics = () => {
     return (
         <div>
-            <h2>ohooooooooooooo</h2>
+            <Banner></Banner>
+            <JobCategory></JobCategory>
+            <FeaturedJobs></FeaturedJobs>
         </div>
     );
 };

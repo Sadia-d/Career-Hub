@@ -3,8 +3,13 @@ import { NavLink } from "react-router";
 
 const Header = () => {
     const links = <>
-         <li><NavLink to='/'>Home</NavLink></li>
-         <li><NavLink to='/statistics'>Statistics</NavLink></li>
+         <li><NavLink to='/'
+         className={({isActive})=>{
+           isActive
+              ? "bg-blue-500 text-white px-3 py-2 rounded"
+              : "text-black px-3 py-2"
+         }}
+         >Statistics</NavLink></li>
          <li><NavLink to="/applied">Applied jobs</NavLink></li>
          <li><NavLink to='/blog' >Blogs</NavLink></li>
     </>

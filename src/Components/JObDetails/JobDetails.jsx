@@ -4,23 +4,39 @@ import { MdCalendarMonth } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
-
+import bg from '../../assets/images/bg2.png'
+import { savedJobApplication } from "../Utilities/localStorage";
+ import { ToastContainer, toast } from 'react-toastify';
+ import 'react-toastify/dist/ReactToastify.css';
+  
 
 const JobDetails = () => {
     const jobs = useLoaderData();
     const {id } = useParams();
     const idInt = parseInt(id);
     const job = jobs.find(job => job.id === idInt);
+
+    const handleApplyJob =()=>{
+            savedJobApplication(idInt);
+            toast('You have applied successfully')
+    }
    
     const {job_description,job_responsibility,educational_requirements,experiences,contact_information,salary,job_title,phone,email,address} = job;
     return (
         <div>
-            <div>
-             <h2>Job Details</h2>
-            </div>
+
+            <div
+          className="hero bg-no-repeat bg-cover bg-center min-h-[300px]  w-full mx-auto"
+         style={{
+         backgroundImage:`url(${bg})`,
+     }}>
+         <div className="  text-center">
+         <h1 className="mb-5 text-3xl font-bold">Job Details</h1>
+        </div>         
+      </div>
            
 
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-4 mt-20">
                 <div className="grid md:col-span-2  mt-4">
 
                     <p className="text-[16px]  text-gray-500 font-semibold" ><span className="text-black">Job description:</span> {job_description}</p>
@@ -40,7 +56,8 @@ const JobDetails = () => {
 
 
                 </div>
-                <div className="col-span-1 border bg-purple-50 p-6 rounded-lg">
+                <div>
+              <div className="col-span-1 border bg-purple-50 p-6 rounded-lg">
                     <h2 className="text-xl font-extrabold">Job details</h2>
                     <p className="border-b-2 border-purple-200 mt-4"></p>
                     <div className="flex gap-1 font-semibold text-gray-700 mt-3" >
@@ -71,10 +88,18 @@ const JobDetails = () => {
                               <p className="text-xl text-gray-700"> Address: 
                           <span className="text-gray-500">{contact_information.address}</span></p>
                     </div>
-
-            </div>
-          </div>
-
+                    
+                 </div>
+                 <div className="mt-4" >
+                        <button onClick={handleApplyJob} className="w-full py-3 rounded-md  bg-purple-400 text-white
+                         mb-3 font-semibold ">Apply Now</button>
+                           <ToastContainer />
+                  </div>
+                </div>
+                
+           
+            
+          </div>         
          </div>
     );
 };
