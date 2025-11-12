@@ -1,4 +1,5 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
+
 
 
 const Header = () => {
@@ -6,7 +7,7 @@ const Header = () => {
          <li><NavLink to='/'
          className={({isActive})=>{
            isActive
-              ? "bg-blue-500 text-white px-3 py-2 rounded"
+              ? "bg-purple-300 text-white px-3 py-2 rounded"
               : "text-black px-3 py-2"
          }}
          >Statistics</NavLink></li>
@@ -49,8 +50,8 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn bg-purple-400  text-white  text-xl">
-      Start Applying</a>
+    <Link to={'/'} ><a className="btn bg-purple-400  text-white  text-xl">
+      Start Applying</a></Link>
   </div>
 </div>
     );
